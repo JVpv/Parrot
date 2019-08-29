@@ -18,6 +18,7 @@ class Postagem: Object, Mappable {
     @objc dynamic var autor: Autor?
     @objc dynamic var mensagem: String?
     @objc dynamic var token: String?
+    @objc dynamic var foto: String?
     
     required convenience init?(map: Map) {
         self.init()
@@ -35,6 +36,7 @@ class Postagem: Object, Mappable {
         self.mensagem                                                     <- map["mensagem"]
         self.curtidas.value                                               <- map["curtidas"]
         self.curtido.value                                                <- map["curtido"]
+        self.foto                                                         <- map["imagem"]
     }
     
     

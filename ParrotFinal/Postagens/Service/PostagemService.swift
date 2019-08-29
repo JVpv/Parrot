@@ -9,6 +9,7 @@
 import Foundation
 import AlamofireObjectMapper
 import Alamofire
+import SwiftyJSON
 
 protocol PostagemServiceDelegate {
     
@@ -22,42 +23,59 @@ class PostagemService {
     
     init(delegate: PostagemServiceDelegate) {
         self.delegate = delegate
-}
-
-func listagemPostagens(pagina: String) {
-    PostagemRequestFactory.listagemPostagens(pagina: pagina).validate().responseArray { (response: DataResponse<[Postagem]>) in
-        
-        switch response.result {
-            
-        case .success:
-            if let postagem = response.result.value {
-                
-                PostagemViewModel.clear()
-                PostagemViewModel.saveAll(objects: postagem)
-            }
-            self.delegate.success()
-        case .failure(let error):
-            
-            self.delegate.failure(error: error.localizedDescription)
-        }
     }
-}
-    
-    func postStatus(status: String){
-        PostagemRequestFactory.postStatus(status: status).validate().responseObject {
-            (response: DataResponse<Postagem>) in
+
+    func listagemPostagens(pagina: String) {
+        PostagemRequestFactory.listagemPostagens(pagina: pagina).validate().responseArray { (response: DataResponse<[Postagem]>) in
             
             switch response.result {
                 
             case .success:
-                
                 if let postagem = response.result.value {
-                    PostagemViewModel.save(object: postagem)
+                    
+                    PostagemViewModel.clear()
+                    PostagemViewModel.saveAll(objects: postagem)
                 }
                 self.delegate.success()
             case .failure(let error):
                 
                 self.delegate.failure(error: error.localizedDescription)
+            }
+        }
+    }
+    
+    func postStatus(data: Data?, fileName: String?, mimeType: String?, parameters: [String : Any], onCompletion: ((JSON?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            if let data = data {
+                multipartFormData.append(data, withName: "imagem", fileName: "foto.jpeg", mimeType: "foto/jpeg")
+            }
+            
+        }, usingThreshold: UInt64.init(), to: baseURL + "/postagem", method: .post, headers: SessionControl.headers) { (result) in
+            switch result{
+            case .success(let upload, _, _):
+                upload.responseObject (completionHandler:{ (response: DataResponse<Postagem>) in
+                    
+                    switch response.result {
+                    case .success:
+                        if let postagem = response.result.value {
+                            PostagemViewModel.save(object: postagem)
+                            print("Sucesso")
+                        }
+                        self.delegate.success()
+                    case .failure(let error):
+                        
+                        print(error.localizedDescription)
+                        self.delegate.failure(error: error.localizedDescription)
+                    }
+                })
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
+                self.delegate.failure(error: error.localizedDescription)
+                print("Errou")
+                onError?(error)
             }
         }
     }

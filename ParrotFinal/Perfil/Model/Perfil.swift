@@ -13,8 +13,8 @@ import ObjectMapper
 class Perfil: Object, Mappable {
     
     var id = RealmOptional<Int>()
-    @objc dynamic var usuario: Autor?
     var postagens = List<Postagem>()
+    @objc dynamic var usuario: Autor?
     
     required convenience init?(map: Map) {
         self.init()
@@ -29,6 +29,5 @@ class Perfil: Object, Mappable {
         self.id.value          <- map["usuario.id"]
         self.usuario           <- map["usuario"]
         self.postagens         <- (map["postagens"], ListTransform<Postagem>())
-        print(self.postagens.count)
     }
 }

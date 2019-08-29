@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-
+import SwiftyJSON
 
 class PostagemRequestFactory {
     
@@ -17,15 +17,6 @@ class PostagemRequestFactory {
         let getPostagens = ["pagina": pagina]
         
         return Alamofire.request(baseURL + "/postagem", method: .get, parameters: getPostagens, encoding: URLEncoding.default, headers: SessionControl.headers)
-    }
-    
-    static func postStatus(status: String) -> DataRequest{
-        
-        let postagem = ["mensagem": status
-        ]
-        
-        return Alamofire.request(baseURL + "/postagem", method: .post, parameters: postagem, encoding: JSONEncoding.default, headers: SessionControl.headers)
-        
     }
     
     static func editStatus(status: String, id: Int) -> DataRequest {

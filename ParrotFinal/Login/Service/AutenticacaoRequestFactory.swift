@@ -17,7 +17,6 @@ class AutenticacaoRequestFactory {
                         "username": username,
                         "email": email,
                         "password": password
-//                        "foto": foto
             ] as [String : Any]
         return Alamofire.request(baseURL + "/usuario", method: .post, parameters: cadastro, encoding: JSONEncoding.default)
     }
@@ -38,7 +37,6 @@ class AutenticacaoRequestFactory {
         ]
         return Alamofire.request(baseURL + "/usuario", method: .put, parameters: params, encoding: JSONEncoding.default, headers: SessionControl.headers)
     }
-    
     static func logout() -> DataRequest {
      
         return Alamofire.request(baseURL + "/usuario/logout", method: .delete, headers: SessionControl.headers)

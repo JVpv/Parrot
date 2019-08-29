@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import SwiftyJSON
 
 protocol AutenticacaoServiceDelegate {
     
@@ -24,26 +25,33 @@ class AutenticacaoService {
         self.delegate = delegate
     }
     
-    func postCadastro(nome: String, username: String, email: String, password: String) {
-        
-        AutenticacaoRequestFactory.postCadastro(nome: nome, username: username, email: email, password: password).validate().responseObject { (response: DataResponse<Usuario>) in
+    func postCadastro(data: Data?, fileName: String?, mimeType: String?, parameters: [String : Any], onCompletion: ((JSON?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil){
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            if let data = data {
+                multipartFormData.append(data, withName: "foto", fileName: fileName ?? "foto.jpeg", mimeType: mimeType ?? "foto/jpeg")
+            }
             
-            switch response.result {
-                
-            case .success:
-                
-                if let usuario = response.result.value {
-                    if let token = response.response?.allHeaderFields["token"] as? String {
-                        usuario.token = token
-                        
-                        UsuarioViewModel.save(object: usuario)
-                        SessionControl.setHeaders()
+        }, usingThreshold: UInt64.init(), to: baseURL + "/usuario", method: .post, headers: SessionControl.headers) { (result) in
+            switch result{
+            case .success(let upload, _, _):
+                upload.responseObject(completionHandler: { (response: DataResponse<Usuario>) in
+                    
+                    if let usuario = response.result.value {
+                        if let token = response.response?.allHeaderFields["token"] as? String {
+                            usuario.token = token
+                            
+                            UsuarioViewModel.save(object: usuario)
+                            SessionControl.setHeaders()
+                        }
                     }
-                }
-                
-                self.delegate.success()
+                    self.delegate.success()
+                })
             case .failure(let error):
-                
+                print("Error in upload: \(error.localizedDescription)")
+                onError?(error)
                 self.delegate.failure(error: error.localizedDescription)
             }
         }

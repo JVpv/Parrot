@@ -16,6 +16,8 @@ class Autor: Object, Mappable {
     @objc dynamic var nome: String?
     @objc dynamic var username: String?
     @objc dynamic var email: String?
+    @objc dynamic var foto: String?
+    var amigos = List<Autor>()
     
     required convenience init?(map: Map) {
         self.init()
@@ -28,10 +30,12 @@ class Autor: Object, Mappable {
     
     func mapping(map: Map) {
         
-        self.id.value                                           <- map["id"]
-        self.nome                                               <- map["nome"]
-        self.username                                           <- map["username"]
-        self.email                                              <- map["email"]
+        self.id.value                            <- map["id"]
+        self.nome                                <- map["nome"]
+        self.username                            <- map["username"]
+        self.email                               <- map["email"]
+        self.foto                                <- map["foto"]
+        self.amigos                              <- (map["amigos"], ListTransform<Autor>())
     }
     
 }

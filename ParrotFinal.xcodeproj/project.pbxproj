@@ -14,11 +14,31 @@
 		6614141322F081B000D69244 /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614141222F081B000D69244 /* Autor.swift */; };
 		6614141522F081C100D69244 /* PostagemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614141422F081C100D69244 /* PostagemViewModel.swift */; };
 		6614141722F081CE00D69244 /* AutorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6614141622F081CE00D69244 /* AutorViewModel.swift */; };
+		661420E1230ED02D000D84DE /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661420E0230ED02D000D84DE /* Realm.swift */; };
+		661804682302DF59005A0E89 /* Solicitacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661804672302DF59005A0E89 /* Solicitacao.swift */; };
+		6618046A2302E07A005A0E89 /* SolicitacaoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661804692302E07A005A0E89 /* SolicitacaoViewModel.swift */; };
+		6618046C2302FCD4005A0E89 /* NotificacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618046B2302FCD4005A0E89 /* NotificacoesViewController.swift */; };
+		6618046F2302FD01005A0E89 /* NotificacoesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618046D2302FD01005A0E89 /* NotificacoesCell.swift */; };
+		661804702302FD01005A0E89 /* NotificacoesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6618046E2302FD01005A0E89 /* NotificacoesCell.xib */; };
+		661917682315578300D25932 /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6619175C2315578100D25932 /* UIApplication+JTSImageViewController.m */; };
+		661917692315578300D25932 /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6619175D2315578100D25932 /* JTSImageViewController.m */; };
+		6619176A2315578300D25932 /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 661917622315578200D25932 /* JTSImageInfo.m */; };
+		6619176B2315578300D25932 /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 661917642315578200D25932 /* UIImage+JTSImageEffects.m */; };
+		6619176C2315578300D25932 /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 661917652315578200D25932 /* JTSSimpleImageDownloader.m */; };
+		6619176D2315578300D25932 /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 661917672315578300D25932 /* JTSAnimatedGIFUtility.m */; };
+		661917702315711100D25932 /* Foto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6619176F2315711100D25932 /* Foto.swift */; };
 		6620350622F8587C001B28BF /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620350522F8587C001B28BF /* PerfilViewController.swift */; };
 		6620350822F8773E001B28BF /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620350722F8773E001B28BF /* Perfil.swift */; };
 		6620350A22F879FC001B28BF /* PerfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620350922F879FC001B28BF /* PerfilViewModel.swift */; };
 		6620351122F88B25001B28BF /* PerfilService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620351022F88B25001B28BF /* PerfilService.swift */; };
 		6620351322F88B33001B28BF /* PerfilRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620351222F88B33001B28BF /* PerfilRequestFactory.swift */; };
+		66244F2B22FAFEB3001EDA3D /* PostagemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66244F2922FAFEB3001EDA3D /* PostagemCell.xib */; };
+		66244F2C22FAFEB3001EDA3D /* PostagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66244F2A22FAFEB3001EDA3D /* PostagemCell.swift */; };
+		66244F2E22FAFECE001EDA3D /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66244F2D22FAFECE001EDA3D /* PrincipalViewController.swift */; };
+		66244F3222FB0F30001EDA3D /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66244F3122FB0F30001EDA3D /* Perfil.storyboard */; };
+		66244F3522FB1145001EDA3D /* PesquisarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66244F3422FB1145001EDA3D /* PesquisarPerfilViewController.swift */; };
+		66244F3922FB124C001EDA3D /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66244F3722FB124C001EDA3D /* PerfilCell.swift */; };
+		66244F3A22FB124C001EDA3D /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66244F3822FB124C001EDA3D /* PerfilCell.xib */; };
 		662B334422F33EF700DAE3D3 /* EditarPostagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662B334322F33EF700DAE3D3 /* EditarPostagemViewController.swift */; };
 		662D8FAA22EF0CE10019DB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D8FA922EF0CE10019DB86 /* AppDelegate.swift */; };
 		662D8FAC22EF0CE20019DB86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D8FAB22EF0CE10019DB86 /* ViewController.swift */; };
@@ -36,14 +56,13 @@
 		662D8FF822EF260F0019DB86 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D8FF722EF260F0019DB86 /* Localizable.swift */; };
 		662D8FFF22EF2F410019DB86 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D8FFE22EF2F410019DB86 /* UsuarioViewModel.swift */; };
 		662D900522EF2F5F0019DB86 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D900422EF2F5F0019DB86 /* Usuario.swift */; };
-		662D901022EF33D80019DB86 /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D900F22EF33D80019DB86 /* PrincipalViewController.swift */; };
-		662D901422EF33E80019DB86 /* PostagemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662D901222EF33E70019DB86 /* PostagemCell.xib */; };
-		662D901522EF33E80019DB86 /* PostagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D901322EF33E80019DB86 /* PostagemCell.swift */; };
 		662D901B22EF36050019DB86 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D901A22EF36040019DB86 /* Storyboards.swift */; };
 		662D901D22EF365B0019DB86 /* Postagem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662D901C22EF365B0019DB86 /* Postagem.storyboard */; };
 		662D901F22EF3D5A0019DB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662D901E22EF3D590019DB86 /* Main.storyboard */; };
 		662D902222EF41ED0019DB86 /* AutenticacaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D902022EF41ED0019DB86 /* AutenticacaoService.swift */; };
 		662D902322EF41ED0019DB86 /* AutenticacaoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D902122EF41ED0019DB86 /* AutenticacaoRequestFactory.swift */; };
+		668A7BA622FDB075004EA284 /* AmigoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668A7BA522FDB075004EA284 /* AmigoService.swift */; };
+		668A7BA822FDB085004EA284 /* AmigoRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668A7BA722FDB085004EA284 /* AmigoRequestFactory.swift */; };
 		668C327722F9BF0C009BE120 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C327622F9BF0C009BE120 /* ObjectMapper.swift */; };
 		66B1D4A422F46CDB00132B65 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B1D4A322F46CDB00132B65 /* TabBarViewController.swift */; };
 		66B1D4A622F47E1000132B65 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B1D4A522F47E1000132B65 /* EditarPerfilViewController.swift */; };
@@ -74,11 +93,39 @@
 		6614141222F081B000D69244 /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
 		6614141422F081C100D69244 /* PostagemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostagemViewModel.swift; sourceTree = "<group>"; };
 		6614141622F081CE00D69244 /* AutorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorViewModel.swift; sourceTree = "<group>"; };
+		661420E0230ED02D000D84DE /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		661804672302DF59005A0E89 /* Solicitacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solicitacao.swift; sourceTree = "<group>"; };
+		661804692302E07A005A0E89 /* SolicitacaoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolicitacaoViewModel.swift; sourceTree = "<group>"; };
+		6618046B2302FCD4005A0E89 /* NotificacoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacoesViewController.swift; sourceTree = "<group>"; };
+		6618046D2302FD01005A0E89 /* NotificacoesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacoesCell.swift; sourceTree = "<group>"; };
+		6618046E2302FD01005A0E89 /* NotificacoesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificacoesCell.xib; sourceTree = "<group>"; };
+		6619175B2315578100D25932 /* ParrotFinal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParrotFinal-Bridging-Header.h"; sourceTree = "<group>"; };
+		6619175C2315578100D25932 /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		6619175D2315578100D25932 /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		6619175E2315578100D25932 /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		6619175F2315578200D25932 /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		661917602315578200D25932 /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		661917612315578200D25932 /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		661917622315578200D25932 /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		661917632315578200D25932 /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		661917642315578200D25932 /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		661917652315578200D25932 /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		661917662315578200D25932 /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		661917672315578300D25932 /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		6619176E23155AB500D25932 /* Unifor Mobile-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unifor Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		6619176F2315711100D25932 /* Foto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foto.swift; sourceTree = "<group>"; };
 		6620350522F8587C001B28BF /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		6620350722F8773E001B28BF /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		6620350922F879FC001B28BF /* PerfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewModel.swift; sourceTree = "<group>"; };
 		6620351022F88B25001B28BF /* PerfilService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilService.swift; sourceTree = "<group>"; };
 		6620351222F88B33001B28BF /* PerfilRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilRequestFactory.swift; sourceTree = "<group>"; };
+		66244F2922FAFEB3001EDA3D /* PostagemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostagemCell.xib; sourceTree = "<group>"; };
+		66244F2A22FAFEB3001EDA3D /* PostagemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostagemCell.swift; sourceTree = "<group>"; };
+		66244F2D22FAFECE001EDA3D /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
+		66244F3122FB0F30001EDA3D /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
+		66244F3422FB1145001EDA3D /* PesquisarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarPerfilViewController.swift; sourceTree = "<group>"; };
+		66244F3722FB124C001EDA3D /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
+		66244F3822FB124C001EDA3D /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
 		662B334322F33EF700DAE3D3 /* EditarPostagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPostagemViewController.swift; sourceTree = "<group>"; };
 		662D8FA622EF0CE10019DB86 /* ParrotFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662D8FA922EF0CE10019DB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,14 +149,13 @@
 		662D8FF722EF260F0019DB86 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		662D8FFE22EF2F410019DB86 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioViewModel.swift; path = ../../../../ViewModel/UsuarioViewModel.swift; sourceTree = "<group>"; };
 		662D900422EF2F5F0019DB86 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../../../../Model/Usuario.swift; sourceTree = "<group>"; };
-		662D900F22EF33D80019DB86 /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrincipalViewController.swift; path = ../../../../Parrot/Application/Postagens/Controller/PrincipalViewController.swift; sourceTree = "<group>"; };
-		662D901222EF33E70019DB86 /* PostagemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostagemCell.xib; path = ../../../../../Parrot/Application/Postagens/Controller/Cells/PostagemCell.xib; sourceTree = "<group>"; };
-		662D901322EF33E80019DB86 /* PostagemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostagemCell.swift; path = ../../../../../Parrot/Application/Postagens/Controller/Cells/PostagemCell.swift; sourceTree = "<group>"; };
 		662D901A22EF36040019DB86 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		662D901C22EF365B0019DB86 /* Postagem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Postagem.storyboard; sourceTree = "<group>"; };
 		662D901E22EF3D590019DB86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		662D902022EF41ED0019DB86 /* AutenticacaoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutenticacaoService.swift; sourceTree = "<group>"; };
 		662D902122EF41ED0019DB86 /* AutenticacaoRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutenticacaoRequestFactory.swift; sourceTree = "<group>"; };
+		668A7BA522FDB075004EA284 /* AmigoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoService.swift; sourceTree = "<group>"; };
+		668A7BA722FDB085004EA284 /* AmigoRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoRequestFactory.swift; sourceTree = "<group>"; };
 		668C327622F9BF0C009BE120 /* ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
 		66B1D4A322F46CDB00132B65 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		66B1D4A522F47E1000132B65 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +211,7 @@
 			children = (
 				6614141022F081A800D69244 /* Postagem.swift */,
 				6614141222F081B000D69244 /* Autor.swift */,
+				6619176F2315711100D25932 /* Foto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,12 +234,34 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		6619175A2315572000D25932 /* JTSImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				661917602315578200D25932 /* JTSAnimatedGIFUtility.h */,
+				661917672315578300D25932 /* JTSAnimatedGIFUtility.m */,
+				661917612315578200D25932 /* JTSImageInfo.h */,
+				661917622315578200D25932 /* JTSImageInfo.m */,
+				6619175E2315578100D25932 /* JTSImageViewController.h */,
+				6619175D2315578100D25932 /* JTSImageViewController.m */,
+				661917632315578200D25932 /* JTSSimpleImageDownloader.h */,
+				661917652315578200D25932 /* JTSSimpleImageDownloader.m */,
+				661917662315578200D25932 /* UIApplication+JTSImageViewController.h */,
+				6619175C2315578100D25932 /* UIApplication+JTSImageViewController.m */,
+				6619175F2315578200D25932 /* UIImage+JTSImageEffects.h */,
+				661917642315578200D25932 /* UIImage+JTSImageEffects.m */,
+				6619175B2315578100D25932 /* ParrotFinal-Bridging-Header.h */,
+			);
+			path = JTSImageViewController;
+			sourceTree = "<group>";
+		};
 		6620350C22F88A86001B28BF /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
 				6620350D22F88A95001B28BF /* Model */,
 				6620350E22F88A9C001B28BF /* ViewModel */,
 				6620350F22F88AA9001B28BF /* Service */,
+				66244F3322FB1128001EDA3D /* Controllers */,
+				66244F3122FB0F30001EDA3D /* Perfil.storyboard */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -201,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				6620350722F8773E001B28BF /* Perfil.swift */,
+				661804672302DF59005A0E89 /* Solicitacao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				6620350922F879FC001B28BF /* PerfilViewModel.swift */,
+				661804692302E07A005A0E89 /* SolicitacaoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,9 +288,33 @@
 			isa = PBXGroup;
 			children = (
 				6620351222F88B33001B28BF /* PerfilRequestFactory.swift */,
+				668A7BA722FDB085004EA284 /* AmigoRequestFactory.swift */,
 				6620351022F88B25001B28BF /* PerfilService.swift */,
+				668A7BA522FDB075004EA284 /* AmigoService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		66244F3322FB1128001EDA3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6620350522F8587C001B28BF /* PerfilViewController.swift */,
+				66244F3422FB1145001EDA3D /* PesquisarPerfilViewController.swift */,
+				6618046B2302FCD4005A0E89 /* NotificacoesViewController.swift */,
+				66244F3622FB1222001EDA3D /* Cells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		66244F3622FB1222001EDA3D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66244F3722FB124C001EDA3D /* PerfilCell.swift */,
+				66244F3822FB124C001EDA3D /* PerfilCell.xib */,
+				6618046D2302FD01005A0E89 /* NotificacoesCell.swift */,
+				6618046E2302FD01005A0E89 /* NotificacoesCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		662D8F9D22EF0CE10019DB86 = {
@@ -289,6 +384,8 @@
 		662D8FDC22EF0D920019DB86 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6619176E23155AB500D25932 /* Unifor Mobile-Bridging-Header.h */,
+				6619175A2315572000D25932 /* JTSImageViewController */,
 				662D8FE222EF0DF70019DB86 /* Generated */,
 				662D8FDD22EF0DAB0019DB86 /* Generators */,
 			);
@@ -379,10 +476,9 @@
 		662D900E22EF33C10019DB86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				662D900F22EF33D80019DB86 /* PrincipalViewController.swift */,
+				66244F2D22FAFECE001EDA3D /* PrincipalViewController.swift */,
 				662B334322F33EF700DAE3D3 /* EditarPostagemViewController.swift */,
 				66B1D4A322F46CDB00132B65 /* TabBarViewController.swift */,
-				6620350522F8587C001B28BF /* PerfilViewController.swift */,
 				662D901122EF33DD0019DB86 /* Cells */,
 			);
 			path = Controllers;
@@ -391,8 +487,8 @@
 		662D901122EF33DD0019DB86 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				662D901322EF33E80019DB86 /* PostagemCell.swift */,
-				662D901222EF33E70019DB86 /* PostagemCell.xib */,
+				66244F2A22FAFEB3001EDA3D /* PostagemCell.swift */,
+				66244F2922FAFEB3001EDA3D /* PostagemCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -401,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				668C327622F9BF0C009BE120 /* ObjectMapper.swift */,
+				661420E0230ED02D000D84DE /* Realm.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,10 +510,10 @@
 			buildConfigurationList = 662D8FCE22EF0CE30019DB86 /* Build configuration list for PBXNativeTarget "ParrotFinal" */;
 			buildPhases = (
 				A0ADF9A615A890A8674E9187 /* [CP] Check Pods Manifest.lock */,
-				662D900622EF31B20019DB86 /* ShellScript */,
-				662D8FA222EF0CE10019DB86 /* Sources */,
 				662D8FA322EF0CE10019DB86 /* Frameworks */,
+				662D8FA222EF0CE10019DB86 /* Sources */,
 				662D8FA422EF0CE10019DB86 /* Resources */,
+				662D900622EF31B20019DB86 /* ShellScript */,
 				BE9AF9863B5773233CCCD614 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -476,6 +573,7 @@
 				TargetAttributes = {
 					662D8FA522EF0CE10019DB86 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					662D8FB922EF0CE30019DB86 = {
 						CreatedOnToolsVersion = 10.3;
@@ -512,12 +610,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				661804702302FD01005A0E89 /* NotificacoesCell.xib in Resources */,
+				66244F2B22FAFEB3001EDA3D /* PostagemCell.xib in Resources */,
 				662D901F22EF3D5A0019DB86 /* Main.storyboard in Resources */,
-				662D901422EF33E80019DB86 /* PostagemCell.xib in Resources */,
+				66244F3222FB0F30001EDA3D /* Perfil.storyboard in Resources */,
 				662D8FE122EF0DE90019DB86 /* Localizable.strings in Resources */,
 				662D8FB422EF0CE30019DB86 /* LaunchScreen.storyboard in Resources */,
 				662D8FDF22EF0DC70019DB86 /* Colors.json in Resources */,
 				662D8FB122EF0CE30019DB86 /* Assets.xcassets in Resources */,
+				66244F3A22FB124C001EDA3D /* PerfilCell.xib in Resources */,
 				662D901D22EF365B0019DB86 /* Postagem.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,10 +703,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6618046F2302FD01005A0E89 /* NotificacoesCell.swift in Sources */,
+				6618046A2302E07A005A0E89 /* SolicitacaoViewModel.swift in Sources */,
 				662D8FDB22EF0D7A0019DB86 /* SessionControl.swift in Sources */,
 				6614140D22F0806300D69244 /* PostagemService.swift in Sources */,
+				668A7BA822FDB085004EA284 /* AmigoRequestFactory.swift in Sources */,
+				661804682302DF59005A0E89 /* Solicitacao.swift in Sources */,
 				662D8FF622EF25F80019DB86 /* Colors.swift in Sources */,
+				668A7BA622FDB075004EA284 /* AmigoService.swift in Sources */,
 				662D900522EF2F5F0019DB86 /* Usuario.swift in Sources */,
+				66244F2C22FAFEB3001EDA3D /* PostagemCell.swift in Sources */,
 				6614140F22F0809700D69244 /* PostagemRequestFactory.swift in Sources */,
 				6614141122F081A800D69244 /* Postagem.swift in Sources */,
 				6614141322F081B000D69244 /* Autor.swift in Sources */,
@@ -613,25 +720,35 @@
 				662D8FFF22EF2F410019DB86 /* UsuarioViewModel.swift in Sources */,
 				662B334422F33EF700DAE3D3 /* EditarPostagemViewController.swift in Sources */,
 				662D8FAC22EF0CE20019DB86 /* ViewController.swift in Sources */,
+				661917692315578300D25932 /* JTSImageViewController.m in Sources */,
 				6614141522F081C100D69244 /* PostagemViewModel.swift in Sources */,
+				66244F3922FB124C001EDA3D /* PerfilCell.swift in Sources */,
+				6618046C2302FCD4005A0E89 /* NotificacoesViewController.swift in Sources */,
 				662D902222EF41ED0019DB86 /* AutenticacaoService.swift in Sources */,
 				6614141722F081CE00D69244 /* AutorViewModel.swift in Sources */,
 				662D8FD922EF0D4B0019DB86 /* ScreenManager.swift in Sources */,
 				66B1D4A422F46CDB00132B65 /* TabBarViewController.swift in Sources */,
 				662D901B22EF36050019DB86 /* Storyboards.swift in Sources */,
 				6620350822F8773E001B28BF /* Perfil.swift in Sources */,
+				6619176D2315578300D25932 /* JTSAnimatedGIFUtility.m in Sources */,
 				662D8FF022EF1E2F0019DB86 /* CadastroViewController.swift in Sources */,
 				668C327722F9BF0C009BE120 /* ObjectMapper.swift in Sources */,
 				66B1D4A622F47E1000132B65 /* EditarPerfilViewController.swift in Sources */,
+				6619176A2315578300D25932 /* JTSImageInfo.m in Sources */,
 				6620350622F8587C001B28BF /* PerfilViewController.swift in Sources */,
 				6620351122F88B25001B28BF /* PerfilService.swift in Sources */,
+				6619176C2315578300D25932 /* JTSSimpleImageDownloader.m in Sources */,
 				662D8FF822EF260F0019DB86 /* Localizable.swift in Sources */,
-				662D901022EF33D80019DB86 /* PrincipalViewController.swift in Sources */,
+				6619176B2315578300D25932 /* UIImage+JTSImageEffects.m in Sources */,
 				662D902322EF41ED0019DB86 /* AutenticacaoRequestFactory.swift in Sources */,
-				662D901522EF33E80019DB86 /* PostagemCell.swift in Sources */,
+				66244F3522FB1145001EDA3D /* PesquisarPerfilViewController.swift in Sources */,
 				662D8FAA22EF0CE10019DB86 /* AppDelegate.swift in Sources */,
+				66244F2E22FAFECE001EDA3D /* PrincipalViewController.swift in Sources */,
 				6620350A22F879FC001B28BF /* PerfilViewModel.swift in Sources */,
 				6620351322F88B33001B28BF /* PerfilRequestFactory.swift in Sources */,
+				661917702315711100D25932 /* Foto.swift in Sources */,
+				661917682315578300D25932 /* UIApplication+JTSImageViewController.m in Sources */,
+				661420E1230ED02D000D84DE /* Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +916,7 @@
 			baseConfigurationReference = 05EC949BD5B97BEAFFB8BDDD /* Pods-ParrotFinal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT97L525CZ;
 				INFOPLIST_FILE = ParrotFinal/Info.plist;
@@ -809,6 +927,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JV.ParrotFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParrotFinal/Application/Supporting Files/JTSImageViewController/ParrotFinal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -819,6 +939,7 @@
 			baseConfigurationReference = 6C10F8173DBD0F227FE37D90 /* Pods-ParrotFinal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT97L525CZ;
 				INFOPLIST_FILE = ParrotFinal/Info.plist;
@@ -829,6 +950,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JV.ParrotFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParrotFinal/Application/Supporting Files/JTSImageViewController/ParrotFinal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

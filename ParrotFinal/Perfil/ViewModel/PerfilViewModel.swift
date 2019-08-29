@@ -11,6 +11,10 @@ import RealmSwift
 
 struct PerfilView {
     var postagens: [PostagemView] = []
+    var nome: String = ""
+    var username: String = ""
+    var id: Int = 0
+    var usuario = AutorView()
 }
 
 class PerfilViewModel {
@@ -22,11 +26,27 @@ class PerfilViewModel {
         }
     }
     
+    static func saveAll(objects: [Perfil]) {
+        
+        try? uiRealm.write{
+            uiRealm.add(objects, update: .all)
+        }
+    }
+    
     static func get(id: Int) -> PerfilView {
         
-        let results = uiRealm.objects(Perfil.self).filter({$0.usuario?.id.value ?? 0 == id})
+        let result = uiRealm.object(ofType: Perfil.self, forPrimaryKey: id)
         
-        return self.getAsView(perfil: results.first)
+        return self.getAsView(perfil: result)
+    }
+    
+    static func get() -> [Perfil] {
+        
+        let results = uiRealm.objects(Perfil.self)
+        var perfis: [Perfil] = []
+        perfis.append(contentsOf: results)
+        
+        return perfis
     }
     
     static func getAsView(perfil: Perfil?) -> PerfilView {
@@ -38,8 +58,28 @@ class PerfilViewModel {
         var perfilView = PerfilView()
         
         perfilView.postagens = PostagemViewModel.getAsView(postagens: perfil.postagens)
+        perfilView.id = perfil.id.value ?? 0
+        perfilView.nome = perfil.usuario?.nome ?? ""
+        perfilView.username = perfil.usuario?.username ?? ""
+        perfilView.usuario = AutorViewModel.getAsView(autor: perfil.usuario)
         
         return perfilView
+    }
+    
+    static func getAsView(perfis: [Perfil]) -> [PerfilView] {
+        var perfisView: [PerfilView] = []
+        
+        perfis.forEach{(perfil) in
+            
+            perfisView.append(self.getAsView(perfil: perfil))
+        }
+        
+        return perfisView
+    }
+    
+    static func getAll() -> [PerfilView] {
+        
+        return self.getAsView(perfis: self.get())
     }
     
     func delete(){
@@ -50,5 +90,11 @@ class PerfilViewModel {
             }
         }
     }
-    
+    static func clear(){
+        
+        try? uiRealm.write {
+            uiRealm.delete(uiRealm.objects(Perfil.self))
+        }
+        
+    }
 }

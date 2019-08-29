@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PerfilViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class PerfilViewController: UIViewController {
     @IBOutlet weak var nAmigosLbl: UILabel!
     @IBOutlet weak var editarUsuarioBtn: UIButton!
     @IBOutlet weak var postagens_tbv: UITableView!
+    @IBOutlet weak var fotoPerfil: UIImageView!
     
     var postagensView: [PostagemView] = []
     var autoresView: [AutorView] = []
@@ -22,24 +24,31 @@ class PerfilViewController: UIViewController {
     
     var pService: PostagemService!
     var service: PerfilService!
+    var aService: AmigoService!
+    
+    var perfilId: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         editarUsuarioBtn.layer.cornerRadius = 10
         self.service = PerfilService.init(delegate: self)
         self.pService = PostagemService.init(delegate: self)
+        self.aService = AmigoService.init(delegate: self)
         self.setupTableView()
-        nomeUsuarioLbl.text = SessionControl.user?.username
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.service.postagensPerfil()
-    }
-    
-    func getPerfil(perfil: PerfilView){
-        perfilView = perfil
+        if let id = self.perfilId {
+            self.service.postagensPerfil(id: id)
+            editarUsuarioBtn.setTitle("Ser miguxo", for: .normal)
+        } else {
+            self.service.postagensPerfil(id: SessionControl.user?.id.value ?? 0)
+        }
     }
     
     func setupTableView() {
@@ -50,8 +59,16 @@ class PerfilViewController: UIViewController {
     
   
     @IBAction func EditarPerfil(_ sender: Any) {
-        let controller = StoryboardScene.Main.editarPerfilViewController.instantiate()
-        self.navigationController?.pushViewController(controller, animated: true)
+        if let id = self.perfilId {
+            aService.AmigoOndeEsta(id: id)
+            editarUsuarioBtn.isEnabled = false
+            editarUsuarioBtn.adjustsImageWhenDisabled = true
+            editarUsuarioBtn.tintColor = .gray
+        } else {
+            
+            let controller = StoryboardScene.Main.editarPerfilViewController.instantiate()
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
 }
 extension PerfilViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,6 +89,10 @@ extension PerfilViewController: PostagemServiceDelegate {
     
 }
 
+extension PerfilViewController: AmigoServiceDelegate {
+    
+}
+
 extension PerfilViewController: PerfilServiceDelegate {
     func failure(error: String) {
         
@@ -80,9 +101,16 @@ extension PerfilViewController: PerfilServiceDelegate {
     
     func success() {
         
-        self.perfilView = PerfilViewModel.get(id: SessionControl.user?.id.value ?? 0)
+        if let id = self.perfilId {
+            self.perfilView = PerfilViewModel.get(id: id)
+        } else {
+            self.perfilView = PerfilViewModel.get(id: SessionControl.user?.id.value ?? 0)
+        }
         
+        self.nomeUsuarioLbl.text = self.perfilView.username
         self.postagensView = self.perfilView.postagens
+        self.nAmigosLbl.text = "\(self.perfilView.usuario.amigos.count) amigos"
+        if let foto = self.perfilView.usuario.fotoUrl { self.fotoPerfil.kf.setImage(with: foto)}
         self.postagens_tbv.reloadData()
     }
 }

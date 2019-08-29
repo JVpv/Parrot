@@ -17,14 +17,14 @@ protocol PerfilServiceDelegate {
 
 class PerfilService{
     
-    var delegate: PostagemServiceDelegate!
+    var delegate: PerfilServiceDelegate!
     
-    init(delegate: PostagemServiceDelegate) {
+    init(delegate: PerfilServiceDelegate) {
         self.delegate = delegate
     }
     
-    func postagensPerfil() {
-        PerfilRequestFactory.postagensPerfil().validate().responseObject {
+    func postagensPerfil(id: Int) {
+        PerfilRequestFactory.postagensPerfil(id: id).validate().responseObject {
             (response: DataResponse<Perfil>) in
             switch response.result{
             case .success:
@@ -37,6 +37,24 @@ class PerfilService{
             
                 self.delegate.failure(error: error.localizedDescription)
             
+            }
+        }
+    }
+    func buscaPerfil(busca: String) {
+        PerfilRequestFactory.buscarPerfil(busca: busca).validate().responseArray { (response: DataResponse<[Autor]>) in
+            
+            switch response.result {
+             
+            case .success:
+                if let perfis = response.result.value {
+                    
+                    AutorViewModel.clear()
+                    AutorViewModel.saveAll(objects: perfis)
+                }
+                self.delegate.success()
+            case .failure(let error):
+                
+                self.delegate.failure(error: error.localizedDescription)
             }
         }
     }

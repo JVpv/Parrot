@@ -139,7 +139,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vra-rp-tNj">
-                                <rect key="frame" x="149.5" y="544" width="76" height="30"/>
+                                <rect key="frame" x="149.5" y="500" width="76" height="30"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Próximo -&gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,14 +148,37 @@
                                     <action selector="Cadastro:" destination="GQj-vh-5D7" eventType="touchUpInside" id="dl1-xx-4B6"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arara-Vermelha" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-20-S7w">
+                                <rect key="frame" x="258" y="77" width="101" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="6rU-aT-L1j"/>
+                                    <constraint firstAttribute="width" constant="101" id="tbC-uz-iYT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pX-mm-e66">
+                                <rect key="frame" x="176" y="111" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Ev-QH-rNR"/>
+                                    <constraint firstAttribute="width" constant="74" id="rpu-zI-u0V"/>
+                                </constraints>
+                                <state key="normal" title="Enviar foto">
+                                    <color key="titleColor" red="0.8862745098" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enviarFoto:" destination="GQj-vh-5D7" eventType="touchUpInside" id="qRw-3K-mCc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="JMK-oc-oLa" secondAttribute="trailing" constant="16" id="08K-2d-CIK"/>
+                            <constraint firstItem="Yuc-20-S7w" firstAttribute="leading" secondItem="8pX-mm-e66" secondAttribute="trailing" constant="8" id="1fx-Gc-ib0"/>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="bottom" secondItem="Vra-rp-tNj" secondAttribute="bottom" constant="93" id="2du-ID-bBY"/>
+                            <constraint firstItem="Yuc-20-S7w" firstAttribute="top" secondItem="tVm-VL-GBP" secondAttribute="top" constant="57" id="5SA-2Z-IoR"/>
                             <constraint firstItem="hdj-aK-A7n" firstAttribute="top" secondItem="oKF-Iy-yPl" secondAttribute="bottom" constant="18" id="F5X-KT-Ekw"/>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="2JX-YV-NX1" secondAttribute="trailing" constant="16" id="GJk-86-lHa"/>
                             <constraint firstItem="oKF-Iy-yPl" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="HW1-6D-Ayt"/>
+                            <constraint firstItem="VF1-ID-Y8P" firstAttribute="top" secondItem="8pX-mm-e66" secondAttribute="bottom" constant="54" id="HzD-oO-lsY"/>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="oKF-Iy-yPl" secondAttribute="trailing" constant="16" id="IIP-qw-Ji9"/>
                             <constraint firstItem="oKF-Iy-yPl" firstAttribute="top" secondItem="2JX-YV-NX1" secondAttribute="bottom" constant="18" id="K8q-k1-xm3"/>
                             <constraint firstItem="JMK-oc-oLa" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="QjN-a1-Alf"/>
@@ -164,19 +187,26 @@
                             <constraint firstItem="hdj-aK-A7n" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="Va1-pM-Qui"/>
                             <constraint firstItem="z5I-C1-vdd" firstAttribute="top" secondItem="tVm-VL-GBP" secondAttribute="top" constant="68" id="WWE-Rs-2r5"/>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="VF1-ID-Y8P" secondAttribute="trailing" constant="16" id="XX4-xp-tn1"/>
+                            <constraint firstItem="8pX-mm-e66" firstAttribute="top" secondItem="tVm-VL-GBP" secondAttribute="top" constant="91" id="e3f-EL-Wre"/>
                             <constraint firstItem="2JX-YV-NX1" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="fN5-F3-Zac"/>
+                            <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="Yuc-20-S7w" secondAttribute="trailing" constant="16" id="fol-o1-c2C"/>
                             <constraint firstItem="z5I-C1-vdd" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="g0j-kP-HtT"/>
                             <constraint firstItem="2JX-YV-NX1" firstAttribute="top" secondItem="JMK-oc-oLa" secondAttribute="bottom" constant="18" id="hLP-hd-wHU"/>
                             <constraint firstItem="Vra-rp-tNj" firstAttribute="centerX" secondItem="tVm-VL-GBP" secondAttribute="centerX" id="jTj-Yd-LKF"/>
+                            <constraint firstItem="VF1-ID-Y8P" firstAttribute="top" secondItem="Yuc-20-S7w" secondAttribute="bottom" constant="19" id="oSV-lS-0Ew"/>
                             <constraint firstItem="VF1-ID-Y8P" firstAttribute="leading" secondItem="tVm-VL-GBP" secondAttribute="leading" constant="16" id="sWL-H4-lL7"/>
                             <constraint firstItem="VF1-ID-Y8P" firstAttribute="top" secondItem="z5I-C1-vdd" secondAttribute="bottom" constant="86" id="so1-su-6Ki"/>
                             <constraint firstItem="tVm-VL-GBP" firstAttribute="trailing" secondItem="hdj-aK-A7n" secondAttribute="trailing" constant="16" id="wdN-bE-e4e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tVm-VL-GBP"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="confirm_tf" destination="hdj-aK-A7n" id="LkT-5R-aAb"/>
                         <outlet property="email_tf" destination="2JX-YV-NX1" id="gsh-i1-lVI"/>
+                        <outlet property="enviarFoto" destination="8pX-mm-e66" id="IJc-hW-j4L"/>
+                        <outlet property="imageView" destination="Yuc-20-S7w" id="LqE-1N-qov"/>
                         <outlet property="name_tf" destination="VF1-ID-Y8P" id="Q1w-8r-MZv"/>
                         <outlet property="password_tf" destination="oKF-Iy-yPl" id="BgN-El-Ihc"/>
                         <outlet property="username_tf" destination="JMK-oc-oLa" id="R84-li-RuQ"/>

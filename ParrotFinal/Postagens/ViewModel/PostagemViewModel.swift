@@ -16,6 +16,12 @@ struct PostagemView {
     var id = 0
     var mensagem = ""
     var autor = AutorView()
+    var foto = ""
+    
+    var fotoUrl: URL? {
+        
+        return URL(string: baseURL + self.foto)
+    }
 }
 
 class PostagemViewModel {
@@ -65,6 +71,7 @@ class PostagemViewModel {
         postagemView.id = postagem.id.value ?? 0
         postagemView.mensagem = postagem.mensagem ?? ""
         postagemView.autor = AutorViewModel.getAsView(autor: postagem.autor)
+        postagemView.foto = postagem.foto ?? ""
         
         return postagemView
     }
@@ -101,6 +108,11 @@ class PostagemViewModel {
         let result = uiRealm.object(ofType: Postagem.self, forPrimaryKey: id)
         
         return self.getAsView(postagem: result)
+    }
+    
+    static func getPublicacao(_ id: Int) -> Postagem? {
+        
+        return uiRealm.objects(Postagem.self).filter("id = \(id)").first
     }
     
     static func clear(){

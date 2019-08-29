@@ -12,9 +12,16 @@ import Alamofire
 class PerfilRequestFactory {
     
     
-    static func postagensPerfil() -> DataRequest{
-        print(SessionControl.user?.id.value)
-        return Alamofire.request(baseURL + "/usuario/\(SessionControl.user?.id.value ?? 0)", method: .get, headers: SessionControl.headers)
+    static func postagensPerfil(id: Int) -> DataRequest {
+        return Alamofire.request(baseURL + "/usuario/\(id)", method: .get, headers: SessionControl.headers)
         
+    }
+    
+    static func buscarPerfil(busca: String) -> DataRequest {
+        
+        let busca = ["busca": busca
+        ]
+        
+        return Alamofire.request(baseURL + "/usuario", method: .get, parameters: busca, encoding: URLEncoding.default, headers: SessionControl.headers)
     }
 }

@@ -21,40 +21,63 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jG0-UQ-SsP">
                                 <rect key="frame" x="16" y="60" width="382" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-bX-2a7">
-                                        <rect key="frame" x="16" y="8" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="Bt6-2d-Duz"/>
-                                            <constraint firstAttribute="height" constant="38" id="y1g-2r-wFP"/>
-                                        </constraints>
-                                        <state key="normal" image="Matelalove"/>
-                                    </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="O que você está sentindo?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nkd-Y9-4YH">
-                                        <rect key="frame" x="70" y="0.0" width="274" height="80"/>
+                                        <rect key="frame" x="70" y="0.0" width="255" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oh-Kh-aEE">
-                                        <rect key="frame" x="352" y="54" width="23" height="22"/>
-                                        <state key="normal" image="icone_de_foto"/>
+                                        <rect key="frame" x="333" y="46" width="42" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Enviar">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="postar_Status:" destination="M3k-bE-iGt" eventType="touchUpInside" id="QaW-VD-QtI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-vz-v4w">
+                                        <rect key="frame" x="352" y="0.0" width="23" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="23" id="hI3-fe-IDC"/>
+                                            <constraint firstAttribute="height" constant="22" id="orC-tg-8j2"/>
+                                        </constraints>
+                                        <state key="normal" image="icone_de_foto"/>
+                                        <connections>
+                                            <action selector="adicionar_foto:" destination="M3k-bE-iGt" eventType="touchUpInside" id="9Qr-bm-wqb"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jqx-fb-WmO">
+                                        <rect key="frame" x="16" y="46" width="38" height="34"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hkF-c3-0cP">
+                                        <rect key="frame" x="12" y="0.0" width="46" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="7X3-Qk-Mdz"/>
+                                            <constraint firstAttribute="height" constant="34" id="vNG-Dw-4fy"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="jqx-fb-WmO" firstAttribute="bottom" secondItem="Nkd-Y9-4YH" secondAttribute="bottom" id="2qb-2g-icI"/>
+                                    <constraint firstItem="jqx-fb-WmO" firstAttribute="centerX" secondItem="hkF-c3-0cP" secondAttribute="centerX" id="41d-44-pSr"/>
+                                    <constraint firstItem="jqx-fb-WmO" firstAttribute="top" secondItem="hkF-c3-0cP" secondAttribute="bottom" constant="12" id="5e0-xr-Ecq"/>
+                                    <constraint firstItem="Nkd-Y9-4YH" firstAttribute="leading" secondItem="jqx-fb-WmO" secondAttribute="trailing" constant="16" id="8Pz-d7-QG1"/>
                                     <constraint firstAttribute="trailing" secondItem="2oh-Kh-aEE" secondAttribute="trailing" constant="7" id="FBm-vY-5uB"/>
                                     <constraint firstItem="Nkd-Y9-4YH" firstAttribute="top" secondItem="jG0-UQ-SsP" secondAttribute="top" id="Hya-HT-6ZU"/>
+                                    <constraint firstItem="f4j-vz-v4w" firstAttribute="top" secondItem="jG0-UQ-SsP" secondAttribute="top" id="J1y-vA-KO6"/>
                                     <constraint firstAttribute="bottom" secondItem="2oh-Kh-aEE" secondAttribute="bottom" constant="4" id="Jsv-wg-alu"/>
-                                    <constraint firstItem="NTo-bX-2a7" firstAttribute="top" secondItem="jG0-UQ-SsP" secondAttribute="top" constant="8" id="LN8-2f-edm"/>
-                                    <constraint firstItem="NTo-bX-2a7" firstAttribute="leading" secondItem="jG0-UQ-SsP" secondAttribute="leading" constant="16" id="OlX-eK-iFe"/>
+                                    <constraint firstItem="hkF-c3-0cP" firstAttribute="leading" secondItem="jG0-UQ-SsP" secondAttribute="leading" constant="12" id="Oge-oo-cYt"/>
+                                    <constraint firstItem="f4j-vz-v4w" firstAttribute="leading" secondItem="Nkd-Y9-4YH" secondAttribute="trailing" constant="27" id="R0S-Ss-uBQ"/>
                                     <constraint firstAttribute="height" constant="80" id="SeV-eV-gxH"/>
+                                    <constraint firstItem="jqx-fb-WmO" firstAttribute="leading" secondItem="jG0-UQ-SsP" secondAttribute="leading" constant="16" id="cqD-1L-ZfR"/>
                                     <constraint firstAttribute="bottom" secondItem="Nkd-Y9-4YH" secondAttribute="bottom" id="dHo-dT-haW"/>
                                     <constraint firstItem="2oh-Kh-aEE" firstAttribute="leading" secondItem="Nkd-Y9-4YH" secondAttribute="trailing" constant="8" id="hcf-mz-49h"/>
-                                    <constraint firstItem="Nkd-Y9-4YH" firstAttribute="leading" secondItem="NTo-bX-2a7" secondAttribute="trailing" constant="16" id="tc0-pl-mHL"/>
+                                    <constraint firstItem="2oh-Kh-aEE" firstAttribute="top" secondItem="f4j-vz-v4w" secondAttribute="bottom" constant="24" id="mLt-ec-8q1"/>
+                                    <constraint firstAttribute="trailing" secondItem="f4j-vz-v4w" secondAttribute="trailing" constant="7" id="z0G-V9-Kma"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PHY-66-xKL">
@@ -70,12 +93,15 @@
                             <constraint firstItem="jG0-UQ-SsP" firstAttribute="leading" secondItem="0H9-dN-7IE" secondAttribute="leading" constant="16" id="evy-ou-XqM"/>
                             <constraint firstItem="PHY-66-xKL" firstAttribute="top" secondItem="jG0-UQ-SsP" secondAttribute="bottom" constant="16" id="fRW-k9-QF5"/>
                             <constraint firstItem="jG0-UQ-SsP" firstAttribute="top" secondItem="0H9-dN-7IE" secondAttribute="top" constant="16" id="gxS-Km-0WH"/>
+                            <constraint firstItem="hkF-c3-0cP" firstAttribute="top" secondItem="0H9-dN-7IE" secondAttribute="top" constant="16" id="im8-54-7SZ"/>
                             <constraint firstItem="0H9-dN-7IE" firstAttribute="bottom" secondItem="PHY-66-xKL" secondAttribute="bottom" id="nyD-P1-pyL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0H9-dN-7IE"/>
                     </view>
                     <connections>
                         <outlet property="background_view" destination="jG0-UQ-SsP" id="avo-hw-Nxh"/>
+                        <outlet property="fotoPerfil" destination="hkF-c3-0cP" id="aTE-J1-sK7"/>
+                        <outlet property="imageView" destination="jqx-fb-WmO" id="Yv0-2c-Yei"/>
                         <outlet property="postagens_tbv" destination="PHY-66-xKL" id="65U-kd-hDx"/>
                         <outlet property="status_tv" destination="Nkd-Y9-4YH" id="Pgp-K9-4yJ"/>
                     </connections>
@@ -247,6 +273,7 @@
                     </view>
                     <connections>
                         <outlet property="editarUsuarioBtn" destination="Hhr-It-Rv8" id="YYE-Sn-eCM"/>
+                        <outlet property="fotoPerfil" destination="H6h-DK-xsT" id="YdT-f7-Bgc"/>
                         <outlet property="nAmigosLbl" destination="hC8-Gs-uLP" id="TuA-uX-0Kl"/>
                         <outlet property="nomeUsuarioLbl" destination="keH-bk-JEL" id="3V8-jO-5g8"/>
                         <outlet property="postagens_tbv" destination="yrO-AY-Z2T" id="3Zw-rQ-Vu9"/>
@@ -259,7 +286,6 @@
     </scenes>
     <resources>
         <image name="MatelaLove grande" width="76" height="76"/>
-        <image name="Matelalove" width="38" height="38"/>
         <image name="icone_de_foto" width="23" height="21"/>
     </resources>
 </document>

@@ -12,6 +12,15 @@ import RealmSwift
 struct AutorView {
     
     var username = ""
+    var nome = ""
+    var id = 0
+    var amigos: [AutorView] = []
+    var foto = ""
+    
+    var fotoUrl: URL? {
+        
+        return URL(string: baseURL + self.foto)
+    }
 }
 
 class AutorViewModel {
@@ -24,6 +33,13 @@ class AutorViewModel {
         }
     }
     
+    static func saveAll(objects: [Autor]) {
+        
+        try? uiRealm.write{
+            uiRealm.add(objects, update: .all)
+        }
+    }
+    
     static func getAsView(autor: Autor?) -> AutorView {
         
         guard let autor = autor else {
@@ -33,8 +49,48 @@ class AutorViewModel {
         var autorView = AutorView()
         
         autorView.username = autor.username ?? ""
+        autorView.nome = autor.nome ?? ""
+        autorView.id = autor.id.value ?? 0
+        autorView.amigos = AutorViewModel.getAsView(autores: autor.amigos)
+        autorView.foto = autor.foto ?? ""
         
         return autorView
+    }
+    
+    static func get() -> [Autor] {
+        
+        let results = uiRealm.objects(Autor.self)
+        var autores: [Autor] = []
+        autores.append(contentsOf: results)
+        
+        return autores
+    }
+    
+    static func getAsView(autores: [Autor]) -> [AutorView] {
+        var autoresView: [AutorView] = []
+        
+        autores.forEach{(autor) in
+            
+            autoresView.append(self.getAsView(autor: autor))
+        }
+        
+        return autoresView
+    }
+    
+    static func getAsView(autores: List<Autor>) -> [AutorView] {
+        var autoresView: [AutorView] = []
+        
+        autores.forEach{(autor) in
+            
+            autoresView.append(self.getAsView(autor: autor))
+        }
+        
+        return autoresView
+    }
+    
+    static func getAll() -> [AutorView] {
+        
+        return self.getAsView(autores: self.get())
     }
     
     func delete(){
@@ -45,6 +101,11 @@ class AutorViewModel {
             }
         }
     }
-    
+    static func clear(){
+        
+        try? uiRealm.write {
+            uiRealm.delete(uiRealm.objects(Autor.self))
+        }
+    }
 }
 
