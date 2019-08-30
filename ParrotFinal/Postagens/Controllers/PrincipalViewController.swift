@@ -22,7 +22,7 @@ class PrincipalViewController: UIViewController, UINavigationControllerDelegate,
     var postagensView: [PostagemView] = []
     var autoresView: [AutorView] = []
     var strings: [[String]] = []
-    var rows: Int = 10
+    var pagina: Int = 1
     
     var data: Data?
     var fileName: String?
@@ -48,9 +48,8 @@ class PrincipalViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let pagina = "1"
         
-        self.service.listagemPostagens(pagina: pagina)
+        self.service.listagemPostagens(pagina: self.pagina)
         
         if let foto = SessionControl.user?.foto {
             self.fotoPerfil.kf.setImage(with: baseURL + foto as? Resource)}
@@ -62,9 +61,10 @@ class PrincipalViewController: UIViewController, UINavigationControllerDelegate,
             
             if let imagem = imageView.image {
                 
-                data = imagem.jpegData(compressionQuality: 0.9)}
+                data = imagem.jpegData(compressionQuality: 0.9)
                 let nonOptionalData: Data! = data
                 self.mimeType = self.getMimeType(for: nonOptionalData)
+            }
                 let parameters = [
                                     "mensagem": status,
                                  ] as [String : Any]
@@ -130,6 +130,13 @@ class PrincipalViewController: UIViewController, UINavigationControllerDelegate,
         }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == self.postagensView.count {
+            self.pagina += 1
+            self.service.listagemPostagens(pagina: self.pagina)
+            self.postagens_tbv.reloadData()
+        }
+    }
 }
 
 extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource {
@@ -139,7 +146,6 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ postagens_tbv: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postagens_tbv.dequeueReusableCell(for: indexPath) as PostagemCell
-        
         cell.bind(postagem: self.postagensView[indexPath.row])
         cell.delegate = self
         return cell
